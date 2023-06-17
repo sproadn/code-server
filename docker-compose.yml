@@ -14,6 +14,8 @@ services:
       - "traefik.http.routers.code.tls.certresolver=sproadn"
     networks:
       - main
+    env_file:
+      - .env
 
 networks:
   main:
