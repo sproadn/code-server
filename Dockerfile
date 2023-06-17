@@ -10,4 +10,4 @@ RUN npm config get python
 
 RUN npm install --global code-server --unsafe-perm
 
-CMD code-server --bind-addr 0.0.0.0:8080 --auth password --password $PASSWORD
+CMD code-server --bind-addr 0.0.0.0:8080
