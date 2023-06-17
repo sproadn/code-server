@@ -6,6 +6,7 @@ RUN node --version
 RUN npm --version
 
 RUN npm config set python python3
+RUN npm config get python
 
 RUN npm install --global code-server --unsafe-perm
 
