@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+
+  code-server:
+    build: .
+    container_name: code-server
+    expose:
+      - 8080
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.code.rule=Host(`code.speroadonon.bj`)"
+      - "traefik.http.routers.code.entrypoints=websecure"
+      - "traefik.http.routers.code.tls.certresolver=sproadn"
+    networks:
+      - main
+
+networks:
+  main:
+    external: true
