@@ -1,6 +1,6 @@
 FROM node:16-alpine3.17
 
-RUN apk add alpine-sdk bash libstdc++ libc6-compat
+RUN apk add alpine-sdk bash libstdc++ libc6-compat python3 py3-pip
 
 RUN node --version
 RUN npm --version
